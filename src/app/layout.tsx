@@ -1,6 +1,6 @@
-
 import localFont from "next/font/local";
 import "./globals.css";
+import { Metadata } from "next";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -12,6 +12,11 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+
+export const metadata: Metadata = {
+  title: "Student Home",
+  description: "Die perfekte Unterkunft für dein duales Studium",
+};
 
 
 export default function RootLayout({

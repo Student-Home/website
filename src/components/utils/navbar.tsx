@@ -12,7 +12,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 transition-all duration-300 bg-transparent">
+    <header className="top-0 z-50 transition-all duration-300 backdrop-blur-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link href="/" className="flex items-center space-x-2">
@@ -29,27 +29,27 @@ export default function Navbar() {
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
               <polyline points="9 22 9 12 15 12 15 22" />
             </svg>
-            <span className="text-xl font-bold text-white">Student Home</span>
+            <span className="text-xl font-bold text-black">Student Home</span>
           </Link>
           <nav className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" className="text-sm font-medium text-white hover:text-gray-200">
+            <Button variant="ghost" className="text-sm font-medium text-black hover:text-gray-800">
               Unterkünfte
             </Button>
-            <Button variant="ghost" className="text-sm font-medium text-white hover:text-gray-200">
+            <Button variant="ghost" className="text-sm font-medium text-black hover:text-gray-800">
               Für Vermieter
             </Button>
-            <Button variant="ghost" className="text-sm font-medium text-white hover:text-gray-200">
+            <Button variant="ghost" className="text-sm font-medium text-black hover:text-gray-800">
               Über uns
             </Button>
           </nav>
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="icon" className="text-white">
+            <Button variant="ghost" size="icon" className="text-black">
               <Globe className="h-5 w-5" />
               <span className="sr-only">Sprache ändern</span>
             </Button>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-white">
+                <Button variant="ghost" size="icon" className="text-black">
                   <User className="h-5 w-5" />
                   <span className="sr-only">Benutzermenu</span>
                 </Button>
@@ -62,7 +62,7 @@ export default function Navbar() {
             </DropdownMenu>
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="md:hidden text-white">
+                <Button variant="ghost" size="icon" className="md:hidden text-black">
                   <Menu className="h-5 w-5" />
                   <span className="sr-only">Menu öffnen</span>
                 </Button>
