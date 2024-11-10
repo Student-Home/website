@@ -23,6 +23,29 @@ import { cn } from '@/lib/utils'
 import Navbar from '@/components/utils/navbar'
 import Footer from '@/components/utils/footer'
 
+const cities = [
+  {
+    name: 'Stuttgart',
+    credit: 'Photo by BarneyElo',
+    creditUrl: 'https://pixabay.com/users/barneyelo-2940289/',
+  },
+  {
+    name: 'Mannheim',
+    credit: 'Photo by Bru-nO',
+    creditUrl: 'https://pixabay.com/users/bru-no-1161770/',
+  },
+  {
+    name: 'Heidenheim',
+    credit: 'Photo by Marcus Fache',
+    creditUrl: 'https://www.instagram.com/marcushdh/',
+  },
+  {
+    name: 'Heilbronn',
+    credit: 'Photo by Unknown',
+    creditUrl: 'https://www.heilbronnerland.de/area/heilbronn',
+  },
+];
+
 export default function Home() {
   const [location, setLocation] = React.useState('')
   const [moveInDate, setMoveInDate] = React.useState<Date>()
@@ -172,23 +195,32 @@ export default function Home() {
       </div>
     </div>
   </div><div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h2 className="text-2xl font-bold mb-8">Beliebte Städte für Dual Studierende</h2>
+      <h2 className="text-2xl font-bold mb-8">Beliebte Städte für Duale Studenten</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {['Stuttgart', 'Mannheim', 'Heidenheim', 'Heilbronn'].map((city) => (
-          <div key={city} className="relative aspect-square rounded-lg overflow-hidden group">
-            <Image
-              src={`/${city}.jpg`}
-              alt={city}
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: "cover"
-              }} />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4 transition-all group-hover:from-black/70">
-              <span className="text-white font-semibold text-lg">{city}</span>
-            </div>
+      {cities.map((city) => (
+        <div key={city.name} className="relative aspect-square rounded-lg overflow-hidden group">
+          <Image
+            src={`/${city.name}.jpg`}
+            alt={city.name}
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "cover"
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-4 transition-all group-hover:from-black/70">
+            <span className="text-white font-semibold text-lg mb-1">{city.name}</span>
+            <a
+              href={city.creditUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/70 text-sm hover:text-white transition-colors"
+            >
+              {city.credit}
+            </a>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
+    </div>
     </div><Footer /></>);
 }
