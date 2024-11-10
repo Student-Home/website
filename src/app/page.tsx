@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { CalendarIcon, MapPinIcon, Search } from 'lucide-react'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 
 import { Button } from '@/components/ui/button'
 import { Calendar } from '@/components/ui/calendar'
