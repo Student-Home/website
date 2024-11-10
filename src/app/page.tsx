@@ -60,9 +60,8 @@ export default function Home() {
   return (<><Navbar /><div className="relative">
     <div className="absolute inset-0">
       <Image
-        src="/home.jpg"
+        src="/home.webp"
         alt="German landscape with small hill"
-        quality={100}
         priority
         fill
         sizes="100vw"
@@ -200,7 +199,7 @@ export default function Home() {
       {cities.map((city) => (
         <div key={city.name} className="relative aspect-square rounded-lg overflow-hidden group">
           <Image
-            src={`/${city.name.toLowerCase()}.jpg`}
+            src={`/${city.name.toLowerCase()}.webp`}
             alt={city.name}
             fill
             sizes="100vw"
