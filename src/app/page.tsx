@@ -200,7 +200,7 @@ export default function Home() {
       {cities.map((city) => (
         <div key={city.name} className="relative aspect-square rounded-lg overflow-hidden group">
           <Image
-            src={`/${city.name}.jpg`}
+            src={`/${city.name.toLowerCase()}.jpg`}
             alt={city.name}
             fill
             sizes="100vw"
