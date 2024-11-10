@@ -60,7 +60,7 @@ export default function Home() {
   return (<><Navbar /><div className="relative">
     <div className="absolute inset-0">
       <Image
-        src="/background.jpg"
+        src="/home.jpg"
         alt="German landscape with small hill"
         quality={100}
         priority
