@@ -38,7 +38,7 @@ export default function Footer() {
           <div className="flex flex-wrap justify-center md:justify-end space-x-6">
             <Link href="#" className="text-sm text-gray-600 hover:underline">Datenschutz</Link>
             <Link href="#" className="text-sm text-gray-600 hover:underline">Nutzungsbedingungen</Link>
-            <Link href="#" className="text-sm text-gray-600 hover:underline">Impressum</Link>
+            <Link href="/impressum" className="text-sm text-gray-600 hover:underline">Impressum</Link>
           </div>
         </div>
       </div>
