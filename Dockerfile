@@ -58,9 +58,9 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
 USER nextjs
 
-EXPOSE 4343
+EXPOSE 4234
 
-ENV PORT=4343
+ENV PORT=4234
 
 # server.js is created by next build from the standalone output
 # https://nextjs.org/docs/pages/api-reference/next-config-js/output
